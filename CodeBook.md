@@ -1,6 +1,6 @@
 # Code Book #
 
- This code book summarizes the variables included in "Average_by_Activity_Subject.txt" which is the result after running the script "run_analysis.r"
+ This code book summarizes the variables included in "Average_by_Activity_Subject.txt" which is the resulting data set after running the script "run_analysis.r" in R. 
 
 # Identifiers (Column 1, 2 and 82)
  
