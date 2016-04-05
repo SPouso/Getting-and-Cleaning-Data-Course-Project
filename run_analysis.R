@@ -28,7 +28,7 @@ Y_train<-read.table("train/y_train.txt", col.names="ActivityCode")
 
 
 ##################################################################
-# 1.Merges the training and the test sets to create one data set #
+# 1.Merge the training and the test sets to create one data set  #
 ##################################################################
 
 #merge the 3 TEST data sets
@@ -51,14 +51,14 @@ colnames(all_data)[563]<-"ActivityCode"
 
 
 ############################################################################################
-# 2.Extracts only the measurements on the mean and standard deviation for each measurement #
+# 2.Extract only the measurements on the mean and standard deviation for each measurement  #
 ############################################################################################
 
 data_mean_std <- all_data[,grepl("mean|std|subject|ActivityCode", names(all_data))]
 
 
 ############################################################################
-#3.Uses descriptive activity names to name the activities in the data set ##
+#3.Use descriptive activity names to name the activities in the data set  ##
 ############################################################################
 
 #create a new column "activitynames" based on the categories of column "ActivityCode"
@@ -86,7 +86,7 @@ table(data_mean_std$activitynames)
 
 
 #######################################################################
-#4.Appropriately labels the data set with descriptive variable names  #
+#4.Appropriately label the data set with descriptive variable names   #
 #######################################################################
 
 # Remove parentheses
@@ -113,7 +113,7 @@ names(data_mean_std)
 
 
 ###############################################################################
-# 5.From the data set in step 4, creates a second, independent tidy data set ##
+# 5.From the data set in step 4, create a second, independent tidy data set  ##
 #   with the average of each variable for each activity and each subject.    ##
 ###############################################################################
 
