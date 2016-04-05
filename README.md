@@ -28,16 +28,16 @@ The objective of this project was to obtain a unique data set that includes data
 I developed a R script (run_analysis.r) that transforms the original data sets to obtain a single data set (Average_by_Activity_Subject.txt). The script is divided into 6 steps: 
 
 	- Set the working directory and load data. 
-		Load all the raw data for TEST DATA (subject_tets.txt, X_test.txt and y_test.txt), TRAINING DATA (subject_train.txt, 			X_test.train and y_train.txt) and the features list (features.txt) and the activity labels (activity_labels.txt).
+		Load all the raw data for TEST DATA (subject_tets.txt, X_test.txt and y_test.txt), TRAINING DATA (subject_train.txt, X_test.train and y_train.txt) and the features list (features.txt) and the activity labels (activity_labels.txt).
 	
 	- Merge the training and the test sets to create one data set. 
 		Using cbind() and rbind() functions, test and training data were merged. 
 	
 	- Extract the measurements on the mean and standard deviation for each measurement. 
-		Using grepl() function, columns that contained only "mean" and "std" were selected. Columns containing subject and 			activity information.
+		Using grepl() function, columns that contained only "mean" and "std" were selected. Columns containing subject and activity information.
 
 	- Change activity labels to descriptive activity names
-		I create a new column named "activitynames". The content of this column is related with the content in column 				"ActivityCode".
+		I create a new column named "activitynames". The content of this column is related with the content in column "ActivityCode".
 
 	- Label the data set with descriptive variable names
 		Using gsub() function, short descriptions were replaced by descriptive names.
